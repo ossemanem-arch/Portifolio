@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Portifolio Ossemane Mala</title>
+    <link rel='stylesheet' href='main.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'>
+    <style>
+
+img{
+    width: 320px;
+    height: auto;
+    border-radius: 10%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-main: #e8edf2;
+    --text-muted: #a8b4bf;
+    --blue: #63c5da;
+    --coral: #ff8a65;
+    --green: #8bd49c;
+    --gold: #f0c674;
+    --line: #2b3942;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: rgba(8, 8, 8, 0.92);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #222;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 12px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(18, 18, 18, 0.9);
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 14px;
+    border-radius: 999px;
+    transition: 0.25s ease;
+}
+
+.nav a:hover {
+    color: #fff;
+    background: rgba(99, 197, 218, 0.12);
+    box-shadow: inset 0 0 0 1px rgba(99, 197, 218, 0.35);
+}
+
+.logo {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #777;
+}
+
+.hero {
+    min-height: 100vh;
+
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 140px 30px 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-text {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: clamp(50px, 8vw, 95px);
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: var(--coral);
+}
+
+.hero h3 {
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--blue);
+
+    margin-bottom: 25px;
+}
+
+.hero h3 span {
+    color: var(--green);
+}
+
+.description {
+    max-width: 550px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+}
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    color: var(--gold);
+    border: 1px solid var(--gold);
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--gold);
+    color: #080808;
+}
+
+.hero-image {
+    width: 360px;
+    height: 450px;
+
+    border: 1px solid #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #333;
+
+    transform: translate(15px, 15px);
+
+    z-index: -1;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #111,
+        #222
+    );
+
+    color: #555;
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 110px 30px;
+
+    border: 30px solid transparent;
+    border-radius: 30px;
+    background-clip: padding-box;
+}
+
+#sobre {
+    background: rgba(30, 105, 150, 0.18);
+}
+
+#formacao {
+    background: rgba(112, 72, 150, 0.18);
+}
+
+#experiencia {
+    background: rgba(190, 105, 35, 0.18);
+}
+
+#competencias {
+    background: rgba(42, 135, 82, 0.18);
+}
+
+#certificados {
+    background: rgba(180, 145, 35, 0.18);
+}
+
+#projectos {
+    background: rgba(99, 197, 218, 0.12);
+}
+
+#contacto {
+    background: rgba(170, 55, 55, 0.18);
+}
+
+.dark-section {
+    max-width: none;
+    padding-left: calc((100% - 1140px) / 2);
+    padding-right: calc((100% - 1140px) / 2);
+
+    background: #0d0d0d;
+
+    border-top: 1px solid #181818;
+    border-bottom: 1px solid #181818;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: var(--blue);
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-size: 45px;
+    color: var(--coral);
+    margin-top: 5px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 80px;
+}
+
+.about-text p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.about-text strong {
+    color: var(--green);
+}
+
+.quote {
+    color: var(--gold) !important;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-top: 40px;
+}
+
+.about-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.info-box {
+    border: 1px solid var(--line);
+    padding: 25px;
+}
+
+.info-box span {
+    display: block;
+
+    color: var(--blue);
+    font-size: 12px;
+
+    margin-bottom: 8px;
+}
+
+.info-box strong {
+    font-size: 15px;
+    color: var(--green);
+}
+
+.education-timeline {
+    position: relative;
+    display: grid;
+    gap: 18px;
+    max-width: 900px;
+}
+
+.education-timeline::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    bottom: 18px;
+    left: 92px;
+    width: 1px;
+    background: var(--line);
+}
+
+.education-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 76px 1fr auto;
+    gap: 28px;
+    align-items: center;
+    padding: 24px 28px;
+    border: 1px solid var(--line);
+    background: rgba(8, 8, 8, 0.35);
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.education-item::before {
+    content: "";
+    position: absolute;
+    left: 87px;
+    width: 11px;
+    height: 11px;
+    border: 3px solid #080808;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold);
+}
+
+.education-item:hover {
+    transform: translateX(6px);
+    border-color: var(--gold);
+    background: rgba(240, 198, 116, 0.07);
+}
+
+.education-year {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.education-details h3 {
+    margin-bottom: 5px;
+    color: var(--text-main);
+    font-size: 20px;
+}
+
+.education-details p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.education-status {
+    padding: 6px 11px;
+    border: 1px solid rgba(139, 212, 156, 0.45);
+    border-radius: 999px;
+    color: var(--green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid var(--line);
+
+    padding: 35px;
+
+    min-height: 230px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--coral);
+}
+
+
+
+.card h3 {
+    margin: 25px 0 15px;
+    font-size: 23px;
+    color: var(--blue);
+}
+
+.card p {
+    color: var(--text-muted);
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.skills-grid .skill {
+    position: relative;
+    min-height: 170px;
+    margin-bottom: 0;
+    padding: 25px;
+    border: 1px solid var(--line);
+    background: rgba(8, 8, 8, 0.28);
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.skills-grid .skill:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+}
+
+.skill-icon {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    color: var(--green);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.skill-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.skills-grid .skill:hover .skill-photo {
+    opacity: 0.45;
+}
+
+.skills-grid .skill h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8px;
+    color: var(--blue);
+    font-size: 21px;
+}
+
+.skills-grid .skill p {
+    position: relative;
+    z-index: 1;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+}
+
+.skill-header span:last-child {
+    color: var(--gold);
+}
+
+.skill-bar {
+    width: 100%;
+    height: 3px;
+
+    background: var(--line);
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--blue);
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 85%;
+    background: var(--coral);
+}
+
+.web {
+    width: 80%;
+    background: var(--green);
+}
+
+.redes {
+    width: 75%;
+    background: var(--gold);
+}
+
+.project-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid var(--line);
+
+    padding: 40px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    border-color: var(--blue);
+}
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    margin-bottom: 35px;
+}
+
+.project-card h3 {
+    font-size: 28px;
+    color: var(--coral);
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: var(--text-muted);
+
+    margin-bottom: 30px;
+}
+
+.project-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 25px;
+}
+
+.project-link {
+    color: var(--green);
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.02);
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+    border-color: var(--green);
+    color: var(--green);
+    box-shadow: 0 0 18px rgba(99, 197, 218, 0.22);
+}
+
+.contact-section {
+    min-height: 600px;
+}
+
+.contact-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.contact-text h3 {
+    font-size: 45px;
+    color: var(--coral);
+
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    color: var(--text-muted);
+
+    max-width: 500px;
+}
+
+.contact-info span {
+    display: block;
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    color: var(--green);
+}
+
+footer {
+    padding: 35px 30px;
+
+    border-top: 1px solid #222;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--blue);
+
+    font-size: 13px;
+}
+
+.footer-slogan {
+    color: var(--gold);
+}
+
+@media (max-width: 900px) {
+
+    .nav {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 12px 12px 0;
+    }
+
+    .nav {
+        padding: 12px 14px;
+        border-radius: 22px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .nav a {
+        flex: 1 1 calc(50% - 10px);
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 120px 20px 60px;
+    }
+
+    .hero h2 {
+        font-size: 55px;
+    }
+
+    .hero h3 {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .dark-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .section-title h2 {
+        font-size: 35px;
+    }
+
+    .about-info {
+        grid-template-columns: 1fr;
+    }
+
+    .education-timeline::before {
+        left: 27px;
+    }
+
+    .education-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 22px 20px 22px 52px;
+    }
+
+    .education-item::before {
+        left: 21px;
+        top: 25px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-text h3 {
+        font-size: 35px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+.formulario {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+
+    background: rgba(14, 13, 13, 0.05);
+   
+   
+
+}
+
+
+
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    background: #e5e5ea;
+    color: rgb(10, 21, 16);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    
+    box-shadow: 0 0 10px rgba(18, 18, 19, 0.2);
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #080808;
+}
+
+
+
+
+.formulario button {
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #35dc4e;
+    color: #080808;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+
+@media (max-width: 600px) {
+
+    .contacto {
+        padding: 60px 5%;
+    }
+
+    .contacto-titulo h2 {
+        font-size: 32px;
+    }
+
+    .formulario {
+        padding: 25px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#formacao">Formação</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#competencias">Competências</a>
+            <a href="#projectos">Projectos</a>
+            <a href="#redes-sociais">Redes sociais</a>
+            <a href="#contacto">Entre em contacto</a>
+        </nav>
+
+    </header>
+
+
+    
+    <section id="inicio" class="hero">
+
+        <div class="hero-text">
+
+            <p class="intro">Olá, eu sou</p>
+
+            <h1>Ossemane<br><span>Rangel Malá</span></h1>
+
+            <h2>Estudante de Informática <br> & Artista Marcial</h2>
+
+            <p class="description">
+                Em constante aprendizagem, desenvolvimento e preparação
+                para novos desafios.
+            </p>
+
+            <div class="buttons">
+                <a href="#sobre" class="btn primary">Conheça-me</a>
+                <a href="#contacto" class="btn secondary">Contactar</a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="photo-placeholder">
+                <span></span>
+                <small><img src="Imagem/Ossemane.jpg" alt="Minha foto"></small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="sobre" class="section">
+
+        <div class="section-title">
+            <h2>Sobre mim</h2>
+        </div>
+
+        <div class="about-content">
+
+            <div>
+                <h3>Quem sou?</h3>
+
+                <p>
+                    Sou estudante de informatica e tenho interesse em desenvolvimento web e tecnologia.
+                    Actualmente, estou a fazer a 12a classe online, enquanto continuo a minha formacao em informatica.
+                </p>
+
+                <p>
+                    No meu tempo livre, gosto de assistir series e animes, treinar e ensinar Tang Soo Do e MMA. Tambem procuro aproveitar as minhas experiencias para aprender, evoluir como pessoa e desenvolver novas habilidades, tanto dentro como fora da area da informatica.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="formacao" class="section">
+
+        <div class="section-title">
+            <h2>Formação</h2>
+        </div>
+
+            <div class="education-timeline">
+                <article class="education-item">
+                    <span class="education-year">2021</span>
+                    <div class="education-details">
+                        <h3>7ª Classe</h3>
+                        <p>Colégio Nyamunda</p>
+                    </div>
+                    <span class="education-status">Concluída</span>
+                </article>
+
+                <article class="education-item">
+                    <span class="education-year">2024</span>
+                    <div class="education-details">
+                        <h3>10ª Classe</h3>
+                        <p>Externato Cantinho do Céu</p>
+                    </div>
+                    <span class="education-status">Concluída</span>
+                </article>
+
+                <article class="education-item">
+                    <span class="education-year">Atual</span>
+                    <div class="education-details">
+                        <h3>12ª Classe</h3>
+                        <p>Escola Comunitária da Polana Cimento B</p>
+                    </div>
+                    <span class="education-status">Em curso</span>
+                </article>
+
+                <article class="education-item">
+                    <span class="education-year">Atual</span>
+                    <div class="education-details">
+                        <h3>Suporte Informático</h3>
+                        <p>ITC — Instituto de Transportes e Comunicações</p>
+                    </div>
+                    <span class="education-status">Em curso</span>
+                </article>
+            </div>
+
+    </section>
+
+
+    <section id="experiencia" class="section">
+
+        <div class="section-title">
+            <h2>Experiência & Formação Complementar</h2>
+        </div>
+
+
+        <div class="cards">
+
+            <article class="card">
+
+                <div class="card-number">01</div>
+
+                <h3>Montagem e Administração de Redes</h3>
+
+                <p class="card-place">
+                    TECNICOL · 3 meses
+                </p>
+
+                <p>
+                    Formação complementar relacionada com montagem,
+                    configuração e administração de redes informáticas.
+                </p>
+
+                <span class="tag">Redes</span>
+
+            </article>
+
+
+            <article class="card">
+
+                <div class="card-number">02</div>
+
+                <h3>Locução</h3>
+
+                <p class="card-place">
+                    Rádio Terra · 3 meses
+                </p>
+
+                <p>
+                    Experiência de formação e prática na área de locução,
+                    comunicação e expressão oral.
+                </p>
+
+                <span class="tag">Comunicação</span>
+
+            </article>
+
+
+            <article class="card empty-card">
+
+                <div class="card-number">03</div>
+
+                <h3>Experiência profissional</h3>
+
+                <p>
+                    Ainda sem experiência profissional formal.
+                </p>
+
+                <p class="future">
+                    Em busca de novas oportunidades e desafios.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section id="competencias" class="section">
+
+        <div class="section-title">
+            <h2>Competências</h2>
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill">
+                <span class="skill-icon">01</span>
+                <img class="skill-photo" src="Imagem/IMG-20260917-WA0021.jpeg" alt="Ecrã com Visual Studio Code aberto">
+                <h3>Programação Web</h3>
+                <p>Formação em programação de sites web.</p>
+            </div>
+
+
+            <div class="skill">
+                <span class="skill-icon">02</span>
+                <img class="skill-photo" src="Imagem/1789684403207.png" alt="Diagrama de uma rede informática">
+                <h3>Redes</h3>
+                <p>Montagem e administração de redes.</p>
+            </div>
+
+
+            <div class="skill">
+                <span class="skill-icon">03</span>
+                <img class="skill-photo" src="Imagem/IMG-20260828-WA0059.jpg" alt="Treino de artes marciais">
+                <h3>Artes Marciais</h3>
+                <p>Tang Soo Do — Cinturão Castanho.</p>
+            </div>
+
+
+            <div class="skill">
+                <span class="skill-icon">04</span>
+                <img class="skill-photo" src="Imagem/1789684504399.png" alt="Estúdio com microfone">
+                <h3>Comunicação</h3>
+                <p>Experiência em locução radiofónica.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projectos" class="section">
+
+        <div class="section-title">
+            <h2>Projectos</h2>
+        </div>
+
+        <div class="project-container">
+
+            <article class="project-card">
+                <div class="project-top">
+                    <span>01</span>
+                    <span>Web</span>
+                </div>
+                <img class="project-image" src="Imagem/IMG-20260917-WA0021.jpeg" alt="Ecrã com Visual Studio Code aberto">
+                <h3>Programação Web</h3>
+                <p>
+                    Trabalho desenvolvido com HTML e CSS para criar uma página web.
+                </p>
+                <a href="HTML portifolio.html" class="project-link">Ver projeto</a>
+            </article>
+
+            <article class="project-card">
+                <div class="project-top">
+                    <span>02</span>
+                    <span>Electricidade</span>
+                </div>
+                <img class="project-image" src="Imagem/1790367530198.jpg" alt="Ecrã com Visual Studio code aberto">
+                <h3>Bases em Electricidade Industrial</h3>
+                <p>
+                    Conhecimentos fundamentais de electricidade aplicados ao contexto industrial.
+                </p>
+                <span class="project-link">Ver projeto</span>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section id="redes-sociais" class="section contact-section">
+
+        <div class="section-title">
+            <h2>Redes sociais</h2>
+        </div>
+
+
+        <div class="contact-content">
+
+            <div>
+                <p>
+                    Siga-me nas redes sociais e fique por dentro das minhas atualizações, projetos e interesses.
+                </p>
+            </div>
+
+
+            <div class="contact-info">
+               
+                <div class="social-links">
+                    <a class="social-link" href="mailto:ossemanem@gmail.com" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a class="social-link" href="https://instagram.com/nothingjust.ossemane" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a class="social-link" href="https://www.tiktok.com/@swift_zenin" target="_blank" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a class="social-link" href="https://wa.me/+258841366129" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+
+            </div>
+
+                </div>
+
+        </section>
+
+        <section id="contacto" class="section contact-section">
+
+                <div class="contacto-titulo">
+        <h2>Entre em <span>Contacto</span></h2>
+    </div>
+
+    <form class="formulario">
+
+        <div class="campo">
+            <label for="nome">Nome</label>
+            <input 
+                type="text" 
+                id="nome" 
+                name="nome"
+                placeholder="Digite o seu nome"
+                required>
+        </div>
+
+        <div class="campo">
+            <label for="email">E-mail</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email"
+                placeholder="Digite o seu e-mail"
+                required>
+        </div>
+
+      
+
+        <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea 
+                id="mensagem" 
+                name="mensagem"
+            
+                rows="6"
+                required></textarea>
+        </div>
+
+        <button type="submit">
+            Enviar Mensagem
+        </button>
+
+        </form>
+
+    </section>
+
+    <footer>
+
+        <p>
+           &copy; 2026 Ossemane Rangel Malá
+        </p>
+
+        <p>
+            Stay Hard.
+        </p>
+
+    </footer>
+    
+</body>
+</html>
